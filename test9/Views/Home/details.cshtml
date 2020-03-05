@@ -1,0 +1,31 @@
+﻿@model HomeDetailsViewModel;
+
+@{
+
+    ViewBag.Title = "Details html page";
+
+}
+
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.emp.name</h1>
+            </div>
+
+            <div class="card-body text-center">
+                <img class="card-img-top" src="~/images/noimage.jpeg" width="300" height="300" />
+
+                <h4>Employee ID : @Model.emp.ID</h4>
+                <h4>Email : @Model.emp.Email</h4>
+                <h4>Department : @Model.emp.Department</h4>
+
+            </div>
+            <div class="card-footer text-center">
+                <a asp-controller="home" asp-action="index"  class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

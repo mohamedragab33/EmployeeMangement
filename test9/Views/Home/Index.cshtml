@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Employee>
+
+@{
+
+
+  
+    ViewBag.Title = "Index html page";
+
+}
+<<div class="card-deck">
+    @foreach (var employee in Model)
+    {
+        <div class="card m-3">
+            <div class="card-header">
+                <h3>@employee.name</h3>
+            </div>
+            <img class="card-img-top" src="~/images/noimage.jpeg"  width="300" height="300" asp-append-version="true"/>
+            <div class="card-footer text-center">
+                <a  asp-controller="home" asp-action="details" asp-route-id="@employee.ID"
+                   class="btn btn-success m-1">View</a>
+                <a href="#" class="btn btn-primary m-1">Edit</a>
+                <a href="#" class="btn btn-danger m-1">Delete</a>
+            </div>
+        </div>
+    }
+</div>
+
+
+
